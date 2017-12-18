@@ -35,7 +35,6 @@ public class ArticleListActivity extends AppCompatActivity implements
     private boolean mIsRefreshing = false;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +99,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         ArticleListAdapter adapter = new ArticleListAdapter(this, cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
+
+        // DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
 
         int columnCount = getResources().getInteger(R.integer.list_column_count);
 

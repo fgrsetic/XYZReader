@@ -29,9 +29,9 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
             android.R.attr.listDivider
     };
 
-    public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
+    private static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
 
-    public static final int VERTICAL_LIST = LinearLayoutManager.VERTICAL;
+    private static final int VERTICAL_LIST = LinearLayoutManager.VERTICAL;
 
     private Drawable mDivider;
 

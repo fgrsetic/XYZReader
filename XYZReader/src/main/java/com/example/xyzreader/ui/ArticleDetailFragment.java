@@ -61,6 +61,7 @@ public class ArticleDetailFragment extends Fragment implements
     private View mPhotoContainerView;
     private ImageView mPhotoView;
     private int mScrollY;
+    private int mScrollX;
     private boolean mIsCard = false;
     private int mStatusBarFullOpacityBottom;
 
@@ -235,7 +236,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
+            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n\n)", "<br />")));
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override
@@ -300,8 +301,6 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         // account for parallax
-        return mIsCard
-                ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY
-                : mPhotoView.getHeight() - mScrollY;
+        return mIsCard ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY : mPhotoView.getHeight() - mScrollY;
     }
 }
