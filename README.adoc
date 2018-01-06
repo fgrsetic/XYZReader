@@ -1,3 +1,20 @@
-= XYZ Reader Starter Code
+XYZ Reader Udacity's Android Nanodegree
 
-This repository stores the starter code for the XYZ Reader project in Udacity's Android Nanodegree.
+Overview
+
+This project is part of Udacity Nanodegree project where sample app needed to be transformed so the user experience of a news reading app is presented with use of Material Design principles. This includes consistent and meaningful use of Material Design UI components, fonts, color, motion and surfaces.
+
+Pre-requisites
+
+    Android SDK v23
+    Android Build Tools v23.0.1
+    Android Support Repository
+
+Libraries
+
+    OkHTTP, HTTP client library for Android
+    Picasso, Android library for image downloading and caching
+
+How To Install
+
+This project uses the Gradle build system. To build this project, use the "gradlew build" command or use "Import Project" in Android Studio.
