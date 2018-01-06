@@ -61,7 +61,6 @@ public class ArticleDetailFragment extends Fragment implements
     private View mPhotoContainerView;
     private ImageView mPhotoView;
     private int mScrollY;
-    private int mScrollX;
     private boolean mIsCard = false;
     private int mStatusBarFullOpacityBottom;
 
@@ -95,8 +94,7 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
-        mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
-                R.dimen.detail_card_top_margin);
+        mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
     }
 

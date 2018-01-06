@@ -4,8 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -67,10 +66,10 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ViewHolder> {
         View view = mInflater.inflate(R.layout.list_item_article, parent, false);
         final ViewHolder vh = new ViewHolder(view);
         view.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                Uri imageUri = ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()));
+                mContext.startActivity(new Intent(Intent.ACTION_VIEW, imageUri));
             }
         });
         return vh;
@@ -113,6 +112,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ViewHolder> {
                 mCursor.getString(ArticleLoader.Query.THUMB_URL),
                 ImageLoaderHelper.getInstance(mContext).getImageLoader());
         holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+
     }
 
     @Override

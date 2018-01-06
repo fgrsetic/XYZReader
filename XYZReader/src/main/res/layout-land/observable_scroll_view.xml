@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.example.xyzreader.helper_classes.ObservableScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/photo_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_photo_height"
+            android:background="@color/photo_placeholder"
+            android:fitsSystemWindows="true">
+            <!--suppress AndroidLintContentDescription -->
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_photo_height"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="@drawable/photo_background_protection" />
+
+        </FrameLayout>
+
+
+        <com.example.xyzreader.helper_classes.MaxWidthLinearLayout
+            android:id="@+id/max_width_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/detail_max_width_linear_layout_top_margin"
+            android:background="#fff"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:id="@+id/meta_bar"
+                android:layout_width="@dimen/detail_metabar_width"
+                android:layout_height="@dimen/detail_metabar_height"
+                android:layout_gravity="center_horizontal"
+                android:background="#333"
+                android:orientation="vertical"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="@dimen/detail_body_top_margin">
+
+                <TextView
+                    android:id="@+id/article_title"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/detail_title_text_size"
+                    android:textStyle="bold"
+                    tools:text="Article text" />
+
+                <TextView
+                    android:id="@+id/article_byline"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8fff"
+                    tools:text="Article byline" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/article_body"
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="@dimen/detail_metabar_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/detail_body_top_margin"
+                android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
+                android:paddingBottom="@dimen/detail_body_inner_padding"
+                android:paddingEnd="@dimen/detail_body_inner_padding"
+                android:paddingStart="@dimen/detail_body_inner_padding"
+                android:textColor="@color/black"
+                android:textColorLink="@color/theme_accent"
+                android:textSize="@dimen/detail_body_text_size"
+                tools:text="Body text" />
+
+        </com.example.xyzreader.helper_classes.MaxWidthLinearLayout>
+
+    </RelativeLayout>
+
+</com.example.xyzreader.helper_classes.ObservableScrollView>

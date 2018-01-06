@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="__local_aars__:C.\Users\Franjo\Programiranje\ANDROID\UDACITY\PROJECTS\xyz-reader-starter-code-master\XYZReader\libs\volley.jar:unspecified@jar">
+  <library name="volley">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/XYZReader/libs/volley.jar!/" />
     </CLASSES>
