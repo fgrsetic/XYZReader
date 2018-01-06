@@ -1,8 +1,8 @@
-XYZ Reader Udacity's Android Nanodegree
+Udacity Android Nanodegree Project - XYZ Reader
 
 Overview
 
-This project is part of Udacity Nanodegree project where sample app needed to be transformed so the user experience of a news reading app is presented with use of Material Design principles. This includes consistent and meaningful use of Material Design UI components, fonts, color, motion and surfaces.
+Sample app needed to be transformed so the user experience of a news reading app is presented with use of Material Design principles. This includes consistent and meaningful use of Material Design UI components, fonts, color, motion and surfaces.
 
 Pre-requisites
 
